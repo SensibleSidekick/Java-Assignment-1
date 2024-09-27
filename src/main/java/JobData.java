@@ -32,11 +32,9 @@ public class JobData {
         loadData();
 
         ArrayList<String> values = new ArrayList<>();
-        String uppercaseField = field.toUpperCase();
 
         for (HashMap<String, String> row : allJobs) {
-            String aValue = row.get(uppercaseField).toUpperCase();
-
+            String aValue = row.get(field);
             if (!values.contains(aValue)) {
                 values.add(aValue);
             }
